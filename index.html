@@ -49,6 +49,7 @@
             <p>I am a 3<sup>rd</sup> year <strong>Software Engineering</strong> student. I <em>really</em> enjoy building websites, and my current goal is to <mark>become a full-stack web developer</mark>.</p> 
             <p>Languages I have used: <b>Python</b>, <b>C++</b> and <i>a little</i> JavaScript.</p> 
             <p>Fun fact: I drink 2 litres of H<sub>2</sub>O while coding every day.</p>
+            <p>My favourite tag is &lt;main&gt;, because it tells the browser where the important content is &amp; helps screen readers.</p> 
             
             <h3>Hear my introduction</h3> 
             <audio controls> 
@@ -87,8 +88,8 @@
                 </li> 
                 <li>Web Development 
                     <ul type="circle"> 
-                        <li>HTML</li> 
-                        <li>CSS</li> 
+                        <li><abbr title="HyperText Markup Language">HTML</abbr> </li> 
+                        <li><abbr title="Cascading Style Sheet">CSS</abbr> </li> 
                         <li>JavaScript</li> 
                     </ul> 
                 </li> 
@@ -196,7 +197,7 @@
             <h2>Education</h2> 
 
             <h3>BSc in Software Engineering</h3> 
-            <p>Addis Ababa Science and Technology University, 2024 – present</p> 
+            <p><abbr title="Addis Ababa Science and Technology University">AASTU</abbr>, <time datetime="2023-09">September 2023</time> – present</p> 
 
             <p> 
                 <label for="degree">Degree progress:</label> 
@@ -269,10 +270,10 @@
             <h2>Contact</h2> 
             <p>Address:<br>Addis Ababa,<br>Ethiopia</p> 
             <p>Email: <a href="mailto:ermiyas.getachew@aastustudent.edu.et">ermiyas.getachew@aastustudent.edu.et</a></p> 
-            <p>Phone: <a href="tel:+251949419708">+251 949 419 708</a></p> 
+            <p>Phone: <a href="tel:+251&nbsp;949&nbsp;419&nbsp;708">+251 949 419 708</a></p> 
             <p>GitHub: <a href="https://github.com/Lantern-7">github.com/Lantern-7</a></p> 
             <p>LinkedIn: <a href="https://www.linkedin.com/in/ermiyas-getachew">linkedin.com/in/ermiyas-getachew</a></p> 
-            <p><a href="files/cv.pdf" download>Download my CV (PDF)</a></p> 
+            <p><a href="files/cv.pdf" download>Download my <abbr title="Curriculum Vitae">CV</abbr> (PDF)</a></p> 
 
             <h3>Connect with me</h3> 
             <img src="images/connect-banner.png" usemap="#connectmap" alt="Connect banner: GitHub, LinkedIn, Email" width="600" height="200"> 
@@ -340,6 +341,7 @@
                 
                     <label for="reason">Reason for contacting me:</label> 
                     <select id="reason" name="reason" required> 
+                        <option value="">Please select a reason</option>
                         <optgroup label="Work"> 
                             <option value="internship">Internship offer</option> 
                             <option value="freelance">Freelance project</option> 
@@ -373,7 +375,8 @@
     </main>
 
     <footer>
-        <p>copyright 2026 Ermiyas Getachew. All rights reserved.</p>
+        <p>Last updated: <time datetime="2026-11-04">4 November 2026</time></p>
+        <p>&copy; 2026 Ermiyas Getachew. All rights reserved.</p>
     </footer>
 
 </body>
