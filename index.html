@@ -15,6 +15,9 @@
 <body>
 
     <header>
+
+        <canvas id="logo" width="120" height="120">Ermiyas Getachew logo</canvas> 
+
         <h1>Ermiyas Getachew</h1> 
         <img src="images/profile.jpg" alt="Photo of Ermiyas Getachew" title="Ermiyas Getachew" width="200" height="200"> 
 
@@ -121,7 +124,9 @@
                     <label for="lvl-js">JavaScript</label> 
                     <meter id="lvl-js" value="0.2" min="0" max="1" low="0.3" high="0.7" optimum="1">20%</meter> 
                 </p>
-    
+
+            <canvas id="skills-chart" width="300" height="150" style="border:1px solid #ccc;">Skills Bar Chart</canvas>    
+           
             <h3>My Learning Roadmap</h3> 
                 <ol type="i"> 
                     <li>HTML structure and content</li> 
@@ -378,6 +383,66 @@
         <p>Last updated: <time datetime="2026-11-04">4 November 2026</time></p>
         <p>&copy; 2026 Ermiyas Getachew. All rights reserved.</p>
     </footer>
+
+    <script> 
+        const canvas = document.getElementById('logo'); 
+        const ctx = canvas.getContext('2d'); 
+    
+        // 1. Blue square background: x, y, width, height 
+        ctx.fillStyle = "#1f5fa8"; 
+        ctx.fillRect(0, 0, 120, 120);
+
+        // 2. White circle: centre x, centre y, radius, start angle, end angle 
+        ctx.beginPath(); 
+        ctx.arc(60, 60, 45, 0, 2 * Math.PI); 
+        ctx.fillStyle = "white"; 
+        ctx.fill(); 
+
+        // 3. Initials in the middle 
+        ctx.fillStyle = "#1f5fa8"; 
+        ctx.font = "bold 36px Arial"; 
+        ctx.textAlign = "center"; 
+        ctx.textBaseline = "middle"; 
+        ctx.fillText("EG", 60, 62); 
+
+    const canvass = document.getElementById('skills-chart');
+    const ctxx = canvass.getContext('2d');
+
+    // Data based on your meter values (0.8, 0.5, 0.7, 0.2)
+    // Using 120px as the maximum bar height (80% of 120 = 96px)
+    const skills = [
+        { name: 'HTML', value: 0.8, color: '#e34c26' },
+        { name: 'CSS', value: 0.5, color: '#264de4' },
+        { name: 'Python', value: 0.7, color: '#306998' },
+        { name: 'JS', value: 0.2, color: '#f0db4f' }
+    ];
+
+        // Starting X position for the first bar
+        let startX = 20;
+
+        skills.forEach(skill => {
+            // Calculate height: value * 120
+            const barHeight = skill.value * 120;
+            
+            // Calculate Y position: bottom edge (130) - height
+            const yPosition = 130 - barHeight;
+
+            // Draw the bar (width is 40px)
+            ctxx.fillStyle = skill.color;
+            ctxx.fillRect(startX, yPosition, 40, barHeight);
+
+            // Draw the skill name under the bar
+            ctxx.fillStyle = '#000';
+            ctxx.font = '12px Arial';
+            ctxx.textAlign = 'center';
+            
+            // Place text roughly in the middle of the bar
+            ctxx.fillText(skill.name, startX + 20, 145);
+
+            // Move X position for the next bar (40px width + 20px gap)
+            startX += 60;
+        });
+    </script>
 
 </body>
 </html>
