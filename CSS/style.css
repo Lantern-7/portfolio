@@ -107,3 +107,61 @@ legend ~ label {
     font-weight: 600;
 }
 
+/* ---------- Forms ---------- */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    border: 2px solid #1f5fa8;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+abbr[title] {
+    cursor: help;
+    text-decoration: underline dotted;
+}
+[class*="btn"] {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2::before {
+    content: "// ";
+    color: hsl(37, 91%, 55%);   /* accent orange */
+}
+h2 + p::first-line {
+    font-weight: 600;
+}
+
+/* ---------- Link states ---------- */
+a:link    { color: #1f5fa8; }     /* not visited yet */
+a:visited { color: #6a3fa0; }     /* already visited */
+a:hover   { color: hsl(37, 91%, 45%); text-decoration: underline; }
+a:active  { color: #b03a2e; }     /* while the mouse button is down */
+
+.btn:hover {
+    background-color: #174a84;    /* darker blue */
+}
+.btn-secondary:hover {
+    background-color: #445566;
+}
+
+/* first step of every ordered list */
+ol li:first-child {
+    font-weight: 600;
+}
+/* striped table rows */
+tbody tr:nth-child(even) {
+    background-color: #eef2f7;
+}
+
+.card:hover {
+    background-color: #6a3fa0;
+}
+
+a[href$=".html"]::after {
+  content: "↗" !important;
+}
