@@ -22,27 +22,33 @@ body {
 html {
     font-size: 16px;   /* 1rem = 16px everywhere */
 }
+
+/* ---------- Headings ---------- */
+h1, h2, h3 {
+    line-height: 1.2;
+    font-weight: 600;
+}
+
 h1 {
-    color: #0f766e;                 /* hex */
+    color: #0f766e;                
     text-align: center;
     font-weight: 700;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 5vw; 
 }
 h2 {
     color: rgb(31, 95, 168);        /* the same blue in RGB */
-    /* text-transform: uppercase; */
     letter-spacing: 2px;
     font-weight: 600;
+    font-size: 1.8rem;
 }
 h3 {
-    color: hsl(212, 69%, 39%);      /* the same blue in HSL */
+    color: hsl(212, 69%, 39%);
+    font-size: 1.2rem; 
 }
 mark {
     background-color: rgba(245, 166, 35, 0.35);   /* see-through orange */
 }
-h1 { font-size: 6vw; }   /* 40px */
-h2 { font-size: 1.8rem; }   /* about 29px */
-h3 { font-size: 1.2rem; }   /* about 19px */
 
 a {
     color: #1f5fa8;
@@ -55,3 +61,49 @@ blockquote {
 code, pre {
     font-family: 'Courier New', monospace;
 }
+
+/* ---------- Components ---------- */
+.tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5a6b7d;
+    letter-spacing: 1px;
+}
+.btn {
+    background-color: #1f5fa8;
+    color: white;
+    font-family: inherit;      /* buttons do not inherit fonts by default */
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.btn-secondary {
+    background-color: #5a6b7d;
+}
+.card {
+    background-color: white;
+}
+
+#contact {
+    background-color: #e8eef6;
+}
+
+/* descendant: every link inside the menu */
+nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+/* child: only paragraphs directly inside a card */
+.card > p {
+    color: #5a6b7d;
+}
+/* adjacent sibling: the first paragraph after each section heading */
+h2 + p {
+    font-size: 1.1rem;
+}
+/* general sibling: every label after a legend in the same fieldset */
+legend ~ label {
+    font-weight: 600;
+}
+
